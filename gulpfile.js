@@ -6,7 +6,7 @@ var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 
-var moduleBgFix = require('./moduleBgFix');
+// var moduleBgFix = require('./moduleBgFix');
 
 var processors = [
 	// moduleBgFix(),
