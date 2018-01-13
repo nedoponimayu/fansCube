@@ -1,7 +1,7 @@
 extends root
 
-append params
-	- var userAuth = false
+//- append params
+	// - var userAuth = false
 
 block styles
 	link(rel="stylesheet" href=asset("styles.css"))
@@ -10,12 +10,22 @@ block styles
 block scripts
 	script(src=asset("main.js"))
 
-block main
-	if userAuth
-		+b-header('Заголовок')
-	block content
+block header
+	+b-header('This is header')
 
-	//- +b-footer()
+block intro
+	//- +b-intro()
+
+block about
+	//- +b-about()
+
+block preorder
+	//- +b-preorder()
+
+block news
+	//- +b-news()
+
+//- +b-footer()
 
 
 
