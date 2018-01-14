@@ -1,9 +1,20 @@
+.about
+	background-image: url("../../assets/i/block2.png")
+	h1,h2
+		color: white
+	p
+		color: lightgrey
 .container
-	border: 1px solid red
+	height: 100vh
 	display: grid
-	grid-template-columns: repeat(3, 200px)
-	justify-content: space-around
-
+	grid-template-columns: repeat(3, 1fr)
+	grid-template-rows: 3fr 4fr
+	grid-template-areas: "content content content"
+	align-items: end
+	justify-items: center
+	align-content: end
 .container__item
 	text-align: center
-	padding: 20px 0px
+	padding: 20px
+.container__item_a
+	grid-area: content

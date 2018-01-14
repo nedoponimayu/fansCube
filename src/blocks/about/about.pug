@@ -4,25 +4,37 @@
 			{
 				icon:'i/learning-icon.png',
 				area:'Learning',
-				description:'Colors, shapes, letters, numbers, basik math'
+				description: ["Colors", "shapes", "letters", "numbers", "basik math"]
 			},
 			{
 				icon:'i/developing-icon.png',
 				area:'Improving',
-				description:'Pronunciation, thinking, hand-works'
+				description: ["Pronunciation", "logic", "thinking", "hand-works"]
 			},
 			{
 				icon:'i/interaction-icon.png',
 				area:'Interaction',
-				description:'Software learning, developing games, making games, applications'
+				description: ["Software learning", "developing games", "making games", "applications"]
 			},
 
 		];
 
 mixin b-about()
-	+b.container
-		each item in introData
-			+e.item
-				+e.IMG.icon(src=asset(item.icon) style="height: 100px;")
-				h1= item.area
-				p= item.description
+	+b.SECTION.about
+		+b.container
+			+e.item_a
+				h1 About section content
+			each item in introData
+				+e.item
+					+e.IMG.icon(src=asset(item.icon) style="height: 100px;")
+					h2= item.area
+					-var text = item.description
+					-var firstLine = text.slice(0,1)
+					-var secondLine = text.slice(1,3) 
+					-var thirdLine = text.slice(3)
+					p 
+						|#{firstLine},
+						br
+						|#{secondLine}
+						br
+						|#{thirdLine}
