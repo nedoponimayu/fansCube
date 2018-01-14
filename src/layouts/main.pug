@@ -1,30 +1,29 @@
 extends root
 
-//- append params
-	// - var userAuth = false
-
 block styles
-	//- link(rel="stylesheet" href=asset("styles.css"))
 	link(rel="stylesheet" href=asset("teamStyles.css"))
 
 block scripts
 	script(src=asset("main.js"))
 
-block header
-	+b-header('This is header')
+block main
+	block content
 
-block intro
-	//- +b-intro()
+//- block header
+//- 	+b-header('This is header')
 
-block about
-	//- h1 See what I can
-	+b-about()
+//- block intro
+//- 	//- +b-intro()
 
-block preorder
-	//- +b-preorder()
+//- block about
+//- 	//- h1 See what I can
+//- 	+b-about()
 
-block news
-	//- +b-news()
+//- block preorder
+//- 	//- +b-preorder()
+
+//- block news
+//- 	//- +b-news()
 
 //- +b-footer()
 
