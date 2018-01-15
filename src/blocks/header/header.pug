@@ -1,17 +1,9 @@
--
-	var listItems = 
-		[
-			'About', 
-			'Functionality', 
-			'Advantages', 
-			'Reviews', 
-			'Construction', 
-			'Ukr'
-		];
-
-mixin b-header(col)
+mixin b-header(menuItems)
 	+b('header').header
 		+e('img').logo(src=asset('i/logo-main.png'))
-		+e('ul').nav
+		+e.nav
+			+b-menu(menuItems)
+
+
 			each item in col
-				+e('li').nav__li(href='#')= item
+				+e('li').nav-item(href='#')= item

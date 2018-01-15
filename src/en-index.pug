@@ -1,0 +1,8 @@
+extends layouts/main
+
+block content
+	+b-header(listItems)
+	+b-intro()
+	+b-intro()
+	+b-about()
+	+b-news({title: 'News', items: newsListEn, button: {url: '#', text: 'Читать еще'}})
