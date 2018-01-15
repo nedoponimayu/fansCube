@@ -1,9 +1,10 @@
 .about
 	background-image: url("i/block2.png")
 	height: 100vh
+	display: grid
 	&__container
 		display: grid
-		height: 90%
+		// height: 95%
 		grid-template-columns: repeat(3, 1fr)
 		grid-template-rows: 3fr 4fr
 		grid-template-areas: "content content content"
@@ -17,6 +18,6 @@
 			grid-area: content
 		&__item-b
 			text-align: center
-			padding: 30px
+			padding: 20px
 			&__icon
 				height: 100px
