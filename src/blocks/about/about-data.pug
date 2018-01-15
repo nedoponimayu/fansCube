@@ -20,7 +20,7 @@
 		];
 mixin makeItem-b(data)
 	each item in data
-		+e.item-b
+		+e.container__item-b
 			+e('img').item-b__icon(src=asset(item.icon) style="height: 100px;")
 			+e('h2').item-b__title= item.area
 			-var text = item.description

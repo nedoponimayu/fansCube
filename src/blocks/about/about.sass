@@ -1,20 +1,22 @@
 .about
 	background-image: url("i/block2.png")
-	display: grid
 	height: 100vh
-	grid-template-columns: repeat(3, 1fr)
-	grid-template-rows: 3fr 4fr
-	grid-template-areas: "content content content"
-	align-items: end
-	justify-items: center
-	align-content: end
-	color: #fff
-	&__item-a
-		text-align: center
-		padding: 20px
-		grid-area: content
-	&__item-b
-		text-align: center
-		padding: 30px
-		&__icon
-			height: 100px
+	&__container
+		display: grid
+		height: 90%
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: 3fr 4fr
+		grid-template-areas: "content content content"
+		align-items: end
+		justify-items: center
+		align-content: end
+		color: #fff
+		&__item-a
+			text-align: center
+			padding: 20px
+			grid-area: content
+		&__item-b
+			text-align: center
+			padding: 30px
+			&__icon
+				height: 100px
