@@ -1,40 +1,19 @@
--
-	var introData = 
-		[
-			{
-				icon:'i/learning-icon.png',
-				area:'Learning',
-				description: ["Colors", "shapes", "letters", "numbers", "basik math"]
-			},
-			{
-				icon:'i/developing-icon.png',
-				area:'Improving',
-				description: ["Pronunciation", "logic", "thinking", "hand-works"]
-			},
-			{
-				icon:'i/interaction-icon.png',
-				area:'Interaction',
-				description: ["Software learning", "developing games", "making games", "applications"]
-			},
-
-		];
-
+include about-data
 mixin b-about()
-	+b.SECTION.about
-		+b.container
-			+e.item_a
-				h1 About section content
-			each item in introData
-				+e.item
-					+e.IMG.icon(src=asset(item.icon) style="height: 100px;")
-					h2= item.area
-					-var text = item.description
-					-var firstLine = text.slice(0,1)
-					-var secondLine = text.slice(1,3) 
-					-var thirdLine = text.slice(3)
-					p 
-						|#{firstLine},
-						br
-						|#{secondLine}
-						br
-						|#{thirdLine}
+	+b.about
+		+e.item-a
+			+e('h1').item-a__title About section content
+		each item in introData
+			+e.item-b
+				+e('img').item-b__icon(src=asset(item.icon) style="height: 100px;")
+				+e('h2').item-b__title= item.area
+				-var text = item.description
+				-var firstLine = text.slice(0,1)
+				-var secondLine = text.slice(1,3) 
+				-var thirdLine = text.slice(3)
+				+e('p').item-b__description 
+					|#{firstLine},
+					br
+					|#{secondLine}
+					br
+					|#{thirdLine}

@@ -1,21 +1,20 @@
 .about
-	height: 100vh
 	background-image: url("../../assets/i/block2.png")
-	h1,h2
-		color: white
-	p
-		color: lightgrey
-.container
-	height: 100vh
 	display: grid
+	height: 100vh
 	grid-template-columns: repeat(3, 1fr)
 	grid-template-rows: 3fr 4fr
 	grid-template-areas: "content content content"
 	align-items: end
 	justify-items: center
 	align-content: end
-.container__item
-	text-align: center
-	padding: 20px
-.container__item_a
-	grid-area: content
+	color: #fff
+	&__item-a
+		text-align: center
+		padding: 20px
+		grid-area: content
+	&__item-b
+		text-align: center
+		padding: 30px
+		&__icon
+			height: 100px
