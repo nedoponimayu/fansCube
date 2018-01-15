@@ -1,4 +1,17 @@
-mixin b-header(title)
+-
+	var listItems = 
+		[
+			'About', 
+			'Functionality', 
+			'Advantages', 
+			'Reviews', 
+			'Construction', 
+			'Ukr'
+		];
+
+mixin b-header(col)
 	+b('header').header
-		+e.IMG.logo(src=asset('i/logo.png') style="width: 100px;")
-		h1= title
+		+e('img').logo(src=asset('i/logo-main.png') style="width: 200px;")
+		+e('ul').nav
+			each item in col
+				+e('li').nav__li(href='#')= item
