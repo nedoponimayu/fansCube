@@ -1,0 +1,15 @@
+mixin makeItem-b(data)
+	each item in data
+		+e.container__item-b
+			+e('img').container__item-b__icon(src=asset(item.icon))
+			+e('h2').container__item-b__title= item.area
+			-var text = item.description
+			-var firstLine = text.slice(0,1)
+			-var secondLine = text.slice(1,3) 
+			-var thirdLine = text.slice(3)
+			+e('p').container__item-b__description 
+				|#{firstLine},
+				br
+				|#{secondLine},
+				br
+				|#{thirdLine}
