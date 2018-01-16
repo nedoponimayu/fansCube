@@ -3,13 +3,4 @@ mixin makeItem-b(data)
 		+e.item-b
 			+e('img').icon(src=asset(item.icon))
 			+e('h2').title= item.area
-			-var text = item.description
-			-var firstLine = text.slice(0,1)
-			-var secondLine = text.slice(1,3) 
-			-var thirdLine = text.slice(3)
-			+e('p').description 
-				|#{firstLine},
-				br
-				|#{secondLine},
-				br
-				|#{thirdLine}
+			+e('p').description= item.description

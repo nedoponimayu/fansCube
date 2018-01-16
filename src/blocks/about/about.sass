@@ -1,25 +1,25 @@
 .about
 	background-image: url("i/block2.png")
 	height: 100vh
-	// display: grid
-	&__container
-		display: grid
-		height: 95%
-		grid-template-columns: repeat(3, 1fr)
-		grid-template-rows: 3fr 4fr
-		grid-template-areas: "content content content"
-		align-items: end
-		justify-items: center
-		align-content: end
-		color: #fff
-		&__item-a
-			text-align: center
-			padding: 20px
-			grid-area: content
-		&__item-b
-			text-align: center
-			padding: 20px
-			&__title
-				padding: 10px
-			&__icon
-				height: 100px
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-template-rows: 3fr 4fr
+	grid-template-areas: "content content content"
+	align-items: end
+	justify-items: center
+	align-content: end
+	color: #fff
+	&__item-a
+		grid-area: content
+	&__item-a, &__item-b 
+		text-align: center
+		padding: 20px
+	&__title 
+		padding: 10px
+	&__description
+		max-width: 135px
+@media (max-width: 600px)
+	.about
+		grid-template-columns: repeat(2, 1fr)
+		grid-template-rows: repeat(3, 1fr)
+		grid-template-areas: "content content"
