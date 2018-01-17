@@ -1,14 +1,25 @@
 .header
+	display: grid
+	grid-template-columns: repeat(2, 1fr 4fr)
 	background: grey
 	display: grid
 	grid-template-columns: 1fr 5fr
 	grid-template-rows: 50px
 	&__logo
-		padding: 0px 50px
-		width: 200px
-	&__nav
-		display: grid
-		grid-template-columns: repeat(6, 1fr)
-		&__li
-			display: inline-block
-			padding: 15px
+		height: 40px
+		padding: 5px 50px
+		
+.menu
+	height: 100%
+	display: grid
+	grid-template-columns: repeat(6, 1fr)
+	align-items: center
+	justify-items: center
+	&__item
+		list-style-type: none
+	&__link
+		text-decoration: none
+		color: #fff
+		padding: 15px
+	&__link:hover
+		text-decoration: underline red
