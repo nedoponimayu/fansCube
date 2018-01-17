@@ -1,7 +1,4 @@
 $mobile-text-size: 30px
-=background($color)
-	.about
-		background: $color 
 =setImg($img)
 	.about
 		background: url("i/" + $img) no-repeat center center fixed
@@ -17,23 +14,17 @@ $mobile-text-size: 30px
 // # Phone
 @media only screen and (min-device-width:320px)
 	+setImg("block2(mobile).png")
-	// +background(pink) 
 
 // // # Tablet
 @media only screen and (min-device-width:768px)
 	+setImg("block2(tablet).png")
-	// +background(purple) 
 
 // // # Desktop
 @media only screen and (min-device-width:992px)
 	+setImg("block2.png")
-	// +background(red) 
 
 @media screen and (orientation: landscape)
 	.about
-		// background-image: url("i/block2.png")
-		// background-size: cover 
-		// background: red
 		grid-template-columns: repeat(3, 1fr)
 		grid-template-rows: 3fr 4fr
 		grid-template-areas: "content content content"
@@ -48,7 +39,6 @@ $mobile-text-size: 30px
 
 @media screen and (orientation: portrait)
 	.about
-		// background: purple
 		align-items: center
 		justify-items: center
 		&__title
