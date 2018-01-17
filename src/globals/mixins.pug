@@ -2,5 +2,5 @@ mixin makeItem-b(data)
 	each item in data
 		+e.item-b
 			+e('img').icon(src=asset(item.icon))
-			+e('h2').title= item.area
+			+e('h2').item-b__title= item.area
 			+e('p').description= item.description

@@ -1,26 +1,40 @@
+$mobile-text-size: 30px
 .about
 	background-image: url("i/block2.png")
-	background-size: cover, contain 
-	height: 100vh
+	background-size: cover 
 	display: grid
-	grid-template-columns: repeat(3, 1fr)
-	grid-template-rows: 3fr 4fr
-	grid-template-areas: "content content content"
-	align-items: end
-	justify-items: center
-	align-content: end
+	height: 100vh
 	color: #fff
-	&__item-a
-		grid-area: content
-	&__item-a, &__item-b 
+	&__item-b
 		text-align: center
-		padding: 20px
-	&__title 
-		padding: 10px
-	&__description
-		max-width: 135px
-@media screen and (max-width: 600px)
+		&__title
+			padding: 10px
+
+@media screen and (min-device-width: 601px)
 	.about
-		grid-template-columns: repeat(2, 1fr)
-		grid-template-rows: repeat(3, 1fr)
-		grid-template-areas: "content content"
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: 3fr 4fr
+		grid-template-areas: "content content content"
+		align-items: end
+		justify-items: center
+		&__item-a
+			grid-area: content
+		&__item-b 
+			padding-bottom: 20px
+		&__description
+			max-width: 135px
+
+@media screen and (max-device-width: 600px)
+	.about
+		align-items: center
+		justify-items: center
+		&__title
+			font-size: $mobile-text-size * 3
+		&__item-b
+			&__title
+				font-size: $mobile-text-size * 1.5
+		&__icon
+			height: 200px
+		&__description
+			font-size: $mobile-text-size
+			max-width: 350px
