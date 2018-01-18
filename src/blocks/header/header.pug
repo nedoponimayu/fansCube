@@ -1,5 +1,4 @@
 mixin b-header(menuItems)
 	+b('header').header
 		+e('img').logo(src=asset('i/logo-main.png'))
-		+e('ul').navbar
-			+b-menu(menuItems)
+		+b-menu(menuItems)

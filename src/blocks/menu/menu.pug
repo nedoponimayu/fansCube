@@ -1,4 +1,6 @@
 mixin b-menu(menuItems)
-	each item in menuItems
-		+e("li")
-			+e(href='#')= item
+	+b.menu
+		+e('ul').navbar
+			each item in menuItems
+				+e("li")
+					+e(href='#')= item
