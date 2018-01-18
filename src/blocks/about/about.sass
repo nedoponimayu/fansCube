@@ -1,53 +1,46 @@
-$mobile-text-size: 30px
-=setImg($img)
-	.about
-		background: url("i/" + $img) no-repeat center center fixed
-		background-size: cover
+$text-size: 30px
 .about
 	display: grid
+	justify-items: center
+	align-items: center
 	height: 100vh
 	color: #fff
-	&__item-b
+	&__features
 		text-align: center
 		&__title
 			padding: 10px
-// # Phone
-@media only screen and (min-device-width:320px)
-	+setImg("block2(mobile).png")
+	
+	// Mobiles
+	@media only screen and (min-device-width:320px)
+		background: url("i/about-mobile.png") no-repeat center center fixed
+		background-size: cover
+	
+	// Tablets
+	@media only screen and (min-device-width:768px) and (max-device-width: 1025px)
+		background: url("i/about-tablet.png") no-repeat center center fixed
+		background-size: cover
+	// Big screen
+	@media only screen and (min-device-width:1026px)
+		background: url("i/about.png") no-repeat center center fixed
+		background-size: cover
 
-// // # Tablet
-@media only screen and (min-device-width:768px)
-	+setImg("block2(tablet).png")
-
-// // # Desktop
-@media only screen and (min-device-width:992px)
-	+setImg("block2.png")
-
-@media screen and (orientation: landscape)
-	.about
+	@media screen and (orientation: landscape)
 		grid-template-columns: repeat(3, 1fr)
 		grid-template-rows: 3fr 4fr
 		grid-template-areas: "content content content"
-		align-items: end
-		justify-items: center
-		&__item-a
+		&__main
 			grid-area: content
-		&__item-b 
-			padding-bottom: 20px
 		&__description
-			max-width: 135px
-
-@media screen and (orientation: portrait)
-	.about
-		align-items: center
-		justify-items: center
+			max-width: 140px
+			
+	@media screen and (orientation: portrait)
 		&__title
-			font-size: $mobile-text-size * 3
-		&__item-b
+			font-size: $text-size * 3
+		&__features
 			&__title
-				font-size: $mobile-text-size * 1.5
+				font-size: $text-size * 1.5
 		&__icon
 			height: 200px
 		&__description
-			font-size: $mobile-text-size
-			max-width: 350px
+			font-size: $text-size
+			max-width: 400px

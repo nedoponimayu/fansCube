@@ -1,5 +1,9 @@
-mixin b-about()
+mixin b-about(data)
 	+b.about
-		+e.item-a
+		+e.main
 			+e('h1').title See what I can
-		+makeItem-b(introData)
+		each item in data
+			+e.features
+				+e('img').icon(src=asset(item.icon))
+				+e('h2').features__title= item.area
+				+e('p').description= item.description
