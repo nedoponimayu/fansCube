@@ -1,25 +1,46 @@
+$text-size: 30px
 .about
-	background-image: url("i/block2.png")
+	display: grid
+	justify-items: center
+	align-items: center
 	height: 100vh
-	// display: grid
-	&__container
-		display: grid
-		height: 95%
+	color: #fff
+	&__features
+		text-align: center
+		&__title
+			padding: 10px
+	
+	// Mobiles
+	@media only screen and (min-device-width:320px)
+		background: url("i/about-mobile.png") no-repeat center center fixed
+		background-size: cover
+	
+	// Tablets
+	@media only screen and (min-device-width:768px) and (max-device-width: 1025px)
+		background: url("i/about-tablet.png") no-repeat center center fixed
+		background-size: cover
+	// Big screen
+	@media only screen and (min-device-width:1026px)
+		background: url("i/about.png") no-repeat center center fixed
+		background-size: cover
+
+	@media screen and (orientation: landscape)
 		grid-template-columns: repeat(3, 1fr)
 		grid-template-rows: 3fr 4fr
 		grid-template-areas: "content content content"
-		align-items: end
-		justify-items: center
-		align-content: end
-		color: #fff
-		&__item-a
-			text-align: center
-			padding: 20px
+		&__main
 			grid-area: content
-		&__item-b
-			text-align: center
-			padding: 20px
+		&__description
+			max-width: 140px
+			
+	@media screen and (orientation: portrait)
+		&__title
+			font-size: $text-size * 3
+		&__features
 			&__title
-				padding: 10px
-			&__icon
-				height: 100px
+				font-size: $text-size * 1.5
+		&__icon
+			height: 200px
+		&__description
+			font-size: $text-size
+			max-width: 400px

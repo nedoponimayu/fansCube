@@ -1,5 +1,3 @@
-mixin b-menu(items)
-	+b('ul').menu
-		each item in items
-			+e('li').item
-				+e.link(href='#')= item
+mixin b-menu(menuItems)
+	each item in menuItems
+		+e('li').nav-item(href='#')= item
