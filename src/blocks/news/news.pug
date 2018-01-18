@@ -5,11 +5,11 @@ mixin b-news(data)
         .container
             +e('h1').title= data.title
             +e.list
-                //- each item in data.items
-                //-     +e.item
-                //-         +e.description= item.description
-                //-         +e.date= item.date
-                //-         +e('img').icon(src=asset(item.icon))
+                each item in data.items
+                    +e.item
+                        +e.description= item.description
+                        +e.date= item.date
+                        +e('img').icon(src=asset(item.icon))
 
             +e('a').button(href=data.button.url)= data.button.text
 
