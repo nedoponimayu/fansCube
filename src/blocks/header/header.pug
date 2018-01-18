@@ -1,5 +1,5 @@
-mixin b-menu(items)
-	each item in items
+mixin b-menu(menuItems)
+	each item in menuItems
 		+e('li').nav-item(href='#')= item
 mixin b-header(menuItems)
 	+b('header').header
