@@ -8,12 +8,19 @@ var sass = require('gulp-sass');
 var processors = [
 	autoprefixer({browsers: ['last 2 version']})
 ];
+var yaml = require('gulp-yaml');
 
 const ignorePug = [
 	'!src/layouts/**',
 	'!src/blocks/**',
 	'!src/globals/**'
 ];
+
+gulp.task('yaml', function(){
+	return gulp.src('src/**/*.yml')
+		.pipe(yaml())
+		.pipe(gulp.dest('build/assets'))
+})
 
 gulp.task('html', function(){
 	return gulp.src(['src/**/*.pug', ...ignorePug])
@@ -52,6 +59,7 @@ gulp.task('watch', function() {
 	gulp.watch('src/**/*.pug', gulp.series('html', reload));
 	gulp.watch('src/**/*.sass', gulp.series('sass'));
 	gulp.watch('src/**/*.js', gulp.series('js', reload));
+	gulp.watch('src/**/*.yml', gulp.series('yaml'));
 });
 
 gulp.task('copy', function(){
@@ -65,7 +73,7 @@ gulp.task('clean', function() {
 	return del('build');
 });
 
-gulp.task('build', gulp.parallel('html', 'sass', 'js', 'copy'));
+gulp.task('build', gulp.parallel('html', 'sass', 'yaml', 'js', 'copy'));
 gulp.task('start', gulp.parallel('watch', 'serve'));
 
 gulp.task('default', gulp.series('clean', 'build', 'start'));

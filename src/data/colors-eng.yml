@@ -1,0 +1,6 @@
+- title: Color-list
+  colors:
+    - name: red
+    - name: green
+    - name: black
+    - name: purple
