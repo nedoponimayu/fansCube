@@ -1,4 +1,7 @@
 $text-size: 30px
+$phone: (min-width:320px) and (max-width: 480px)
+$tablet: (min-width:481px) and (max-width: 780px)
+$pc: (min-width:781px)
 .about
 	display: grid
 	justify-items: center
@@ -11,16 +14,16 @@ $text-size: 30px
 			padding: 10px
 	
 	// Mobiles
-	@media only screen and (min-device-width:320px)
+	@media only screen and #{$phone}
 		background: url("i/about-mobile.png") no-repeat center center fixed
 		background-size: cover
 	
 	// Tablets
-	@media only screen and (min-device-width:768px) and (max-device-width: 1025px)
+	@media only screen and #{$tablet}
 		background: url("i/about-tablet.png") no-repeat center center fixed
 		background-size: cover
 	// Big screen
-	@media only screen and (min-device-width:1026px)
+	@media only screen and #{$pc}
 		background: url("i/about.png") no-repeat center center fixed
 		background-size: cover
 
