@@ -5,5 +5,5 @@ mixin b-header(menuItems)
 			+b-menu(menuItems)
 
 
-			each item in col
+			each item in menuItems
 				+e('li').nav-item(href='#')= item
