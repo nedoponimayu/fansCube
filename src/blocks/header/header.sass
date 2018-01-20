@@ -1,11 +1,16 @@
 .header
-	background: grey
-	display: grid
-	grid-template-columns: 1fr 5fr
-	grid-template-rows: 50px
+	position: fixed
+	width: 100%
+	margin-top: 10px
 	&__logo
 		padding: 0px 50px
 		width: 200px
+		float: left
 	&__nav
-		display: grid
-		grid-template-columns: repeat(6, 1fr)
+		margin-top: 15px
+	&__nav-item
+		float: left
+		list-style-type: none
+		margin-left: 20px
+	&__lang
+		margin-left: 5%

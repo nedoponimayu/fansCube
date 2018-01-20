@@ -1,8 +1,14 @@
+mixin b-lang(languageItem)
+	each item in languageItem
+		+e('span').lang=item
+
 mixin b-menu(listItems)
 	each item in listItems
 		+e('li').nav-item(href='#')= item
+
 mixin b-header(listItems)
 	+b('header').header
 		+e('img').logo(src=asset('i/logo-main.png'))
 		+e.nav
 			+b-menu(listItems)
+			+b-lang(languageItem)
