@@ -1,8 +1,8 @@
-mixin b-about(data)
+mixin b-about(introData)
 	+b.about
 		+e.main
 			+e('h1').title See what I can
-		each item in data
+		each item in introData
 			+e.features
 				+e('img').icon(src=asset(item.icon))
 				+e('h2').features__title= item.area

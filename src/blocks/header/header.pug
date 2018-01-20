@@ -1,8 +1,8 @@
-mixin b-menu(menuItems)
-	each item in menuItems
+mixin b-menu(listItems)
+	each item in listItems
 		+e('li').nav-item(href='#')= item
-mixin b-header(menuItems)
+mixin b-header(listItems)
 	+b('header').header
 		+e('img').logo(src=asset('i/logo-main.png'))
 		+e.nav
-			+b-menu(menuItems)
+			+b-menu(listItems)
