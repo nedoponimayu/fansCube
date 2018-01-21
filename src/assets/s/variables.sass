@@ -1,0 +1,9 @@
+$phoneWidth: 320px
+$tablet-portWidth: 480px
+$tablet-landWidth: 768px
+$desktopWidth: 1024px
+
+$phone: "only screen and (max-width: " + $phoneWidth + ")"
+$tablet-port: "only screen and (min-width: " + ($phoneWidth + 1) + ") and (max-width: " + $tablet-portWidth + ")"
+$tablet-land: "only screen and (min-width: " + ($tablet-portWidth + 1) + ") and (max-width: " + $tablet-landWidth + ")"
+$desktop: "only screen and (min-width: " + ($tablet-landWidth + 1) + ") and (max-width: " + $desktopWidth + ")
