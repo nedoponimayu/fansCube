@@ -1,3 +1,5 @@
+@import '../../assets/s/variables'
+
 .intro 
     background-image: url('i/block1_xlg.png')
     background-size: cover
@@ -6,20 +8,20 @@
     display: flex
     align-items: flex-end
 
-    @media only screen and (min-width: 769px) and (max-width: 1024px)
+    @media $desktop
         background-image: url('i/block1_lg.png')
         
-    @media only screen and (min-width: 481px) and (max-width: 768px)
+    @media $tablet-land
         background-image: url('i/block1_md.png')
         flex-wrap: wrap
         align-content: space-around
        
-    @media only screen and (min-width: 321px) and (max-width: 480px)
+    @media $tablet-port
         background-image: url('i/block1_sm.png')
         flex-wrap: wrap
         align-content: space-around
     
-    @media only screen and (max-width: 320px)
+    @media $phone
         background-image: url('i/block1_xs.png')
         flex-wrap: wrap
         align-content: space-around
