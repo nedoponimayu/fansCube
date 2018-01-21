@@ -2,7 +2,7 @@
 //- {title: '', items: [], button: {url: '', text: ''}}
 mixin b-news(data)
     +b.news
-        .container
+        .container.myContainer
             +e('h1').title= data.title
             +e.list
                 each item in data.items

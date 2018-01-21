@@ -10,12 +10,37 @@ body
 	background-repeat: no-repeat
 	background-size: cover
 
-.news__title
-	width: 100%
-	text-align: center
+	&__title
+		width: 100%
+		text-align: center
 
-.news__list
-	margin-top: 10vh
+	&__myContainer
+		max-width: 1200px 
+		margin: 0 auto
+		padding: 150px 20px 0 20px
+
+	&__list
+		margin-top: 10vh
+
+	&__item
+		box-sizing: border-box
+		width: 33.333333%
+		padding-right: 20px
+		float: left
+		margin-bottom: 60px
+
+	&__date
+		color: #9fa3a7
+		font-size: 14px
+		margin-top: 10px
+		float: left
+
+	&__icon
+		margin-left: 30px
+		margin-top: 10px
+		width: 19px
+		height: 16px	
+
 
 
 h1
@@ -27,17 +52,9 @@ a
 	line-height: 58px
 	color: white
 
-.container
-	width: 80%
-	margin: 0 auto
-	padding-top: 25vh
 
-.news__item
-	box-sizing: border-box
-	width: 33.333333%
-	padding-right: 20px
-	float: left
-	margin-bottom: 60px
+
+
 
 .button
 	height: 60px
@@ -52,20 +69,37 @@ a
 	text-align: center
 	clear: left
 
-.news__date
-	color: #9fa3a7
-	font-size: 14px
-	margin-top: 10px
-	float: left
 
-.news__icon
-	margin-left: 30px
-	margin-top: 10px
-	width: 19px
-	height: 16px
-
-@media(max-width: 1024px) 
+@media #{$phone} 
 	.news__item
 		float: none
 		width: 60%
 		margin: 30px auto
+	.container
+		padding: 0px 20px 0 20px
+
+@media #{$tablet-port} 
+	.news__item
+		float: none
+		width: 60%
+		margin: 30px auto
+
+	.container
+		padding: 50px 20px 0 20px
+
+@media #{$tablet-land} 
+	.news__item
+		float: none
+		width: 60%
+		margin: 30px auto
+
+	.container
+		padding: 0px 20px 0 20px
+
+	.news__item
+		float: none
+		width: 60%
+		margin: 30px auto
+
+	.container
+		padding: 0px 20px 0 20px
