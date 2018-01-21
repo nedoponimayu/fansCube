@@ -8,20 +8,20 @@
     display: flex
     align-items: flex-end
 
-    @media $desktop
+    @media #{$desktop}
         background-image: url('i/block1_lg.png')
         
-    @media $tablet-land
+    @media #{$tablet-land}
         background-image: url('i/block1_md.png')
         flex-wrap: wrap
         align-content: space-around
        
-    @media $tablet-port
+    @media #{$tablet-port}
         background-image: url('i/block1_sm.png')
         flex-wrap: wrap
         align-content: space-around
     
-    @media $phone
+    @media #{$phone}
         background-image: url('i/block1_xs.png')
         flex-wrap: wrap
         align-content: space-around
