@@ -1,9 +1,10 @@
+mixin b-menu(menuItems)
+	each item in menuItems
+		+e('li').nav-item(href='#')= item
 mixin b-header(menuItems)
 	+b('header').header
 		+e('img').logo(src=asset('i/logo-main.png'))
 		+e.nav
 			+b-menu(menuItems)
-
-
 			each item in menuItems
 				+e('li').nav-item(href='#')= item

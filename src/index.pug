@@ -3,5 +3,5 @@ extends layouts/main
 block content
 	+b-header(listItems)
 	+b-intro()
-	+b-about()
+	+b-about(introData)
 	+b-news({title: 'Новости', items: newsList, button: {url: '#', text: 'Читать еще'}})
