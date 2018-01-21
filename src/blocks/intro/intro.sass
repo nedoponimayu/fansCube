@@ -1,62 +1,72 @@
 @import '../../assets/s/variables'
 
-.intro 
+.intro
     background-image: url('i/block1_xlg.png')
     background-size: cover
     background-position: center
     height: 100vh
-    display: flex
-    align-items: flex-end
 
     @media #{$desktop}
         background-image: url('i/block1_lg.png')
         
     @media #{$tablet-land}
         background-image: url('i/block1_md.png')
-        flex-wrap: wrap
-        align-content: space-around
        
     @media #{$tablet-port}
         background-image: url('i/block1_sm.png')
-        flex-wrap: wrap
-        align-content: space-around
     
     @media #{$phone}
         background-image: url('i/block1_xs.png')
-        flex-wrap: wrap
-        align-content: space-around
+
+    &__container
+        display: flex
+        align-items: flex-end
+        height: 100vh
+        
+        @media #{$tablet-land}
+            flex-wrap: wrap
+            align-content: space-around
+        
+        @media #{$tablet-port}
+            flex-wrap: wrap
+            align-content: space-around
+        
+        @media #{$phone}
+            flex-wrap: wrap
+            align-content: space-around
 
     &__box
         color: #fff
         text-align: center
         flex-basis: 50%
+        align-self: flex-end
         padding: 0 30px 60px 30px
-        @media only screen and (min-width: 769px) and (max-width: 1024px)
+        @media #{$desktop}
             padding: 0 20px 60px 20px
-        @media only screen and (min-width: 481px) and (max-width: 768px)
+        @media #{$tablet-land}
             flex-basis: 100%
             padding: 0 20px
-        @media only screen and (min-width: 321px) and (max-width: 480px)
+        @media #{$tablet-port}
             flex-basis: 100%
             padding: 0 20px
-        @media only screen and (max-width: 320px)
+        @media #{$phone}
             flex-basis: 100%
             padding: 0 20px
     &__title
         font-size: 40px
         line-height: 64px
-        @media only screen and (min-width: 321px) and (max-width: 480px)
+        @media #{$tablet-port}
             font-size: 26px
             line-height: 34px
-        @media only screen and (max-width: 320px)
+        @media #{$phone}
             font-size: 22px
             line-height: 24px
     &__text
         font-size: 20px
         line-height: 32px
-        @media only screen and (min-width: 321px) and (max-width: 480px)
+        @media #{$tablet-port}
             font-size: 15px
             line-height: 18px
-        @media only screen and (max-width: 320px)
+        @media #{$phone}
             font-size: 13px
             line-height: 18px
