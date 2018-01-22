@@ -6,5 +6,3 @@ mixin b-header(menuItems)
 		+e('img').logo(src=asset('i/logo-main.png'))
 		+e.nav
 			+b-menu(menuItems)
-			each item in menuItems
-				+e('li').nav-item(href='#')= item
