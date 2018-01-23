@@ -5,6 +5,7 @@ var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var sass = require('gulp-sass');
+var gcmq = require('gulp-group-css-media-queries');
 var processors = [
 	autoprefixer({browsers: ['last 2 version']})
 ];
@@ -38,6 +39,7 @@ gulp.task('sass', function () {
 	return gulp.src('src/assets/**/*.sass')
 	    .pipe(sass.sync().on('error', sass.logError))
 		.pipe(postcss(processors))
+		.pipe(gcmq())
 	    .pipe(gulp.dest('build/assets'))
 		.pipe(browserSync.stream())
 });
