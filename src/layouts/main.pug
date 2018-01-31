@@ -4,13 +4,13 @@ block meta
 	meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
 
 block stylesFirstPage
-	style(type="text/css").
+	style(type="text/css")= 
 		.intro {
 			background-image: url("assets/i/block1_xlg.png");
 			background-size: cover;
 			background-position: center;
 			height: 100vh;
-		}
+		};
 
 		.intro__container {
 			display: -webkit-box;
@@ -20,7 +20,7 @@ block stylesFirstPage
 			-ms-flex-align: end;
 			align-items: flex-end;
 			height: 100vh;
-		}
+		};
 
 		.intro__box {
 			color: #fff;
@@ -30,17 +30,17 @@ block stylesFirstPage
 			-ms-flex-item-align: end;
 			align-self: flex-end;
 			padding: 0 30px 60px 30px;
-		}
+		};
 
 		.intro__title {
 			font-size: 40px;
 			line-height: 64px;
-		}
+		};
 
 		.intro__text {
 			font-size: 20px;
 			line-height: 32px;
-		}
+		};
 
 block stylesFirstPage
 	link(rel="stylesheet" href=asset("teamStyles.css"))
