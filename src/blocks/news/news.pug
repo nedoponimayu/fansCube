@@ -2,7 +2,7 @@
 //- {title: '', items: [], button: {url: '', text: ''}}
 mixin b-news(data)
     +b.news
-        .container.myContainer
+        .container.newsContainer
             +e('h1').title= data.title
             +e.list
                 each item in data.items
@@ -10,7 +10,7 @@ mixin b-news(data)
                         +e.description= item.description
                         +e.date= item.date
                         +e('img').icon(src=asset(item.icon))
-            .button
+            +e('button').button
                 +e('a')(href=data.button.url)= data.button.text
 
 

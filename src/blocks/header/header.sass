@@ -1,16 +1,13 @@
 .header
 	position: fixed
-	width: 100%
-	margin-top: 10px
+	top: 0px
+	display: grid
+	grid-template-columns: 1fr 4fr
 	&__logo
-		padding: 0px 50px
-		width: 200px
-		float: left
-	&__nav
-		margin-top: 20px
-	&__nav-item
-		float: left
-		list-style-type: none
-		margin-left: 20px
-	&__lang
-		margin-left: 100px
+		height: 40px
+		padding: 5px 50px
+	&__menu
+	@media only screen and (max-device-width: 600px)
+		display: block
+		width: 100%
+		text-align: center
