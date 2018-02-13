@@ -3,9 +3,85 @@ extends root
 block meta
 	meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
 
+
+block stylesFirstPage
+	style
+		:sass
+			.intro 
+				background-image: url('assets/i/intro_xlg.png')
+				background-size: cover
+				background-position: center
+				height: 100vh
+				@media only screen and (min-width: 789px) and (max-width: 1024px)
+					background-image: url('assets/i/intro_lg.png')
+				@media only screen and (min-width: 481px) and (max-width: 768px)
+					background-image: url('assets/i/intro_md.png')
+				@media only screen and (min-width: 321px) and (max-width: 480px)
+					background-image: url('assets/i/intro_sm.png')
+				@media only screen and (max-width: 320px)
+					background-image: url('assets/i/intro_xs.png')
+			
+
+			.intro__container 
+				display: -webkit-box
+				display: -ms-flexbox
+				display: flex
+				-webkit-box-align: end
+				-ms-flex-align: end
+				align-items: flex-end
+				height: 100vh
+				@media only screen and (min-width: 481px) and (max-width: 768px)
+					flex-wrap: wrap
+					align-content: space-around
+				@media only screen and (min-width: 321px) and (max-width: 480px)
+					flex-wrap: wrap
+					align-content: space-around
+				@media only screen and (max-width: 320px)
+					flex-wrap: wrap
+					align-content: space-around
+
+			.intro__box 
+				color: #fff
+				text-align: center
+				-ms-flex-preferred-size: 50%
+				flex-basis: 50%
+				-ms-flex-item-align: end
+				align-self: flex-end
+				padding: 0 30px 60px 30px
+				@media only screen and (min-width: 789px) and (max-width: 1024px)
+					padding: 0 20px 60px 20px
+				@media only screen and (min-width: 481px) and (max-width: 768px)
+					flex-basis: 100%
+					padding: 0 20px
+				@media only screen and (min-width: 321px) and (max-width: 480px)
+					flex-basis: 100%
+					padding: 0 20px
+				@media only screen and (max-width: 320px)
+					flex-basis: 100%
+					padding: 0 20px
+
+			.intro__title 
+				font-size: 40px
+				line-height: 64px
+				@media only screen and (min-width: 321px) and (max-width: 480px)
+					font-size: 26px
+					line-height: 34px
+				@media only screen and (max-width: 320px)
+					font-size: 22px
+					line-height: 24px
+
+			.intro__text 
+				font-size: 20px
+				line-height: 32px
+				@media only screen and (min-width: 321px) and (max-width: 480px)
+					font-size: 15px
+					line-height: 18px
+				@media only screen and (max-width: 320px)
+					font-size: 13px
+					line-height: 18px
+
 block styles
 	link(rel="stylesheet" href=asset("teamStyles.css"))
-
 
 block scripts
 	script(src=asset("main.js"))
